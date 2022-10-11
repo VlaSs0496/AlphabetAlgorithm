@@ -13,7 +13,7 @@ pipeline {
                 //git 'https://github.com/VlaSs0496/AlphabetAlgorithm.git"'
                 //sh "mvn install"
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
             post {
                 // If Maven was able to run the tests, even if some of the test
