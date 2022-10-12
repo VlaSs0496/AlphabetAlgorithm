@@ -21,8 +21,8 @@ pipeline {
                 success {s
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
-			bat "cd C:\ProgramData\Jenkins\.jenkins\workspace\prueba 2\target"
-			bat "move Algoritmo_Sensas-1.0-SNAPSHOT.jar C:\ProgramData\Jenkins\.jenkins\workspace\prueba 2"
+			bat 'cd C:\ProgramData\Jenkins\.jenkins\workspace\prueba 2\target'
+			bat 'move Algoritmo_Sensas-1.0-SNAPSHOT.jar C:\ProgramData\Jenkins\.jenkins\workspace\prueba 2'
                 }
             }
         }
