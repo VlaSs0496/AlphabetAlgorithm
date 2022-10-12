@@ -14,11 +14,13 @@ pipeline {
                 //sh "mvn install"
                 // Run Maven on a Unix agent.
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+		bat "cd C:\ProgramData\Jenkins\.jenkins\workspace\prueba 2\target"
+		bat "move Algoritmo_Sensas-1.0-SNAPSHOT.jar C:\ProgramData\Jenkins\.jenkins\workspace\prueba 2"
             }
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                success {
+                success {s
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
                 }
