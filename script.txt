@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                //git 'https://github.com/VlaSs0496/AlphabetAlgorithm.git"'
+                git 'https://github.com/VlaSs0496/AlphabetAlgorithm.git"'
                 //sh "mvn install"
                 // Run Maven on a Unix agent.
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
